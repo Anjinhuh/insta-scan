@@ -4,12 +4,15 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        
+        <p class="text-aprox">Aproxime do QR code</p>
+        <p>CONTAGEM</p>
+        <p class="number-count">0</p>
         <script src="instascan.min.js"></script>
         <video id="preview"></video>
 
         <script>
             let dados = []
+            let contador = 0
         document.addEventListener("DOMContentLoaded", event => {
             let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
           Instascan.Camera.getCameras().then(cameras => {
@@ -19,14 +22,14 @@
         
           scanner.addListener('scan', content => {
               dados.push(content)
-              
-            document.querySelector('.changeHere').innerHTML = dados.toString()
-            alert('FOI')
+                contador++
+              document.querySelector('.changeHere').innerHTML = dados.toString()
+              document.querySelector('.number-count').innerHTML = contador
           });
         });
           
         </script>
-        <p>Inserir dados</p>
+        <p>ID PRODUTOS</p>
         <p class="changeHere"></p>
     </body>
 </html>
