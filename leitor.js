@@ -10,7 +10,7 @@ scanner.start();
 scanner.addListener('scan', content => {
   dados.push(content)
     contador++
-  document.querySelector('.changeHere').innerHTML = dados.toString()
-  document.querySelector('.number-count').innerHTML = contador + "itens"
+  //document.querySelector('.changeHere').innerHTML = dados.toString()
+  document.querySelector('.number-count').innerHTML = contador + " itens"
 });
 });
