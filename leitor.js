@@ -3,7 +3,7 @@ var audio = document.querySelector("audio")
 let dados = []
 let contador = 0
 document.addEventListener("DOMContentLoaded", event => {
-let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), mirror: false });
 
 Instascan.Camera.getCameras().then(cameras => {
 scanner.camera = cameras[cameras.length - 1];
